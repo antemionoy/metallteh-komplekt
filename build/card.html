@@ -14,6 +14,7 @@
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 
 <body>
@@ -50,28 +51,72 @@
 <main class="main main-inner">
     <section class="content">
         <div class="content__grid d-flex">
-            <div class="content__col content__col_width-50">
-
-                <h1 class="content___title">Офис на Петроградской</h1>
-
-                <div class="content__slider card-slider">
-                    <div class="card-slider__slide">
-                        <img src="#" alt="" class="card-slider__image">
+            <div class="content__col content__col_width-50 content__left">
+                <h1 class="card__title title title_h1">Офис на Петроградской</h1>
+                <div class="content__slider d-flex">
+                    <div class="card-slider">
+                        <div class="card-slider__slide">
+                            <img src="img/card-image.jpg" alt="Card Image" class="card-slider__image">
+                        </div>
+                        <div class="card-slider__slide">
+                            <img src="img/card-image.jpg" alt="Card Image" class="card-slider__image">
+                        </div>
                     </div>
-                    <div class="card-slider__slide">
-                        <img src="#" alt="" class="card-slider__image">
-                    </div>
-                    <div class="card-slider__slide">
-                        <img src="#" alt="" class="card-slider__image">
+                    <div class="card-slider__dots c-dots d-flex">
+                        <button role="button" class="owl-dot c-dots__image" style="background-image: url('/');"></button>
+                        <button role="button" class="owl-dot c-dots__image" style="background-image: url('/');"></button>
                     </div>
                 </div>
-
-                <a href="#" class="content__btn form__btn btn">Оставить заявку</a>
-
+                <a href="#" class="content__btn card__btn form__btn btn">Оставить заявку</a>
             </div>
             <div class="content__col content__padding card d-flex">
                 <div class="content__inner">
-                    .card__
+                    <table class="card__table c-table">
+                        <tr class="c-table__row">
+                            <td>ID</td>
+                            <td>205</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Тип помещения:</td>
+                            <td>Офис</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Площадь:</td>
+                            <td>200 м2</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Район:</td>
+                            <td>Петроградский</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Метро:</td>
+                            <td>Петроградская</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Адрес:</td>
+                            <td>ул.Кропоткина, дом 1</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Отопление:</td>
+                            <td>Есть</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Статус:</td>
+                            <td class="c-table__status c-table__status_off">Сдано до 02.12.2020</td>
+                        </tr>
+                        <tr class="c-table__row">
+                            <td>Этаж:</td>
+                            <td>6</td>
+                        </tr>
+                    </table>
+                    <div class="card__info">
+                        <p>Здесь есть все. Инфраструктура, которая порадует вас и ваших работников. Приятная глазу архитектура. Удобные парковки и транспортные развязки. Масса локаций, где вы можете начать свой бизнес и превратить небольшую компанию в корпорацию.</p>
+                        <p>Здесь есть все. Инфраструктура, которая порадует вас и ваших работников. Приятная глазу архитектура. Удобные парковки и транспортные развязки. Масса локаций, где вы можете начать свой бизнес и превратить небольшую компанию в корпорацию.</p>
+                    </div>
+                    <div class="card__bottom d-flex">
+                        <a href="#" class="card__link">Скачать коммерческое предложение</a>
+                        <p class="card__price">Цена: 100500руб</p>
+                    </div>
                 </div>
             </div>
         </div>

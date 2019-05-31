@@ -1,5 +1,6 @@
 /*= ../../bower_components/owl.carousel/dist/assets/owl.carousel.min.css*/
 /*= ../../bower_components/owl.carousel/dist/assets/owl.theme.default.css*/
+/*= ../../bower_components/animate.css/animate.min.css*/
 
 @import "partials/vars";
 @import "partials/mixin";
@@ -49,7 +50,7 @@ body {
 
 .main {
     position: relative;
-    height: calc(100vh - 108px);
+    height: calc(100vh - 80px);
     width: 100%;
     flex: 1;
 }
@@ -165,6 +166,22 @@ button {
 .btn {
     border: none;
     background-color: transparent;
+    width: 212px;
+    max-width: 100%;
+    height: 65px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    border-radius: 35px;
+
+    &_red {
+        background-color: #f63f45;
+    }
+
+    &_empty {
+        border: 1px solid #fff;
+    }
+
 }
 
 input,
@@ -206,6 +223,32 @@ h2 {
 h3 {
     font-size: 25px;
     line-height: 28px;
+}
+
+.owl-stage-outer {
+    overflow: hidden;
+    height: inherit;
+}
+
+.owl-stage,
+.owl-item {
+    height: inherit;
+    position: relative;
+}
+
+.owl-nav.disabled {
+    display: none;
+}
+
+.owl-stage {
+    display: flex;
+}
+
+.animated {
+    -webkit-animation-duration: 3000ms;
+    animation-duration: 3000ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }
 
 .title {
@@ -551,7 +594,7 @@ h3 {
         height: inherit;
     }
 
-    &__padding{
+    &__padding {
         padding: 10px 30px 0px;
         overflow-y: auto;
         flex-direction: column;
@@ -622,9 +665,9 @@ h3 {
 
 }
 
-.application{
+.application {
 
-    &__title{
+    &__title {
         font-size: rem(50px);
         line-height: rem(42px);
         text-align: center;
@@ -632,8 +675,8 @@ h3 {
 
 }
 
-.application .content__inner{
-    padding: 80px rem(90px) 0px; 
+.application .content__inner {
+    padding: 80px rem(90px) 0px;
 }
 
 .form {
@@ -728,7 +771,7 @@ h3 {
         position: relative;
     }
 
-    &__image{
+    &__image {
         width: 40px;
         height: 40px;
         margin-right: 10px;
@@ -741,38 +784,48 @@ h3 {
     background-color: #000;
 }
 
+.map [class*="ymaps-2"][class*="-ground-pane"] {
+    -webkit-filter: grayscale(100%) url(../img/bluefilter.svg#bluefilter);
+    filter: grayscale(100%) url(../img/bluefilter.svg#bluefilter);
+}
+
 
 // catalog
 
-.catalog{
+.catalog {
 
-    &__col{
+    &__col {
         flex: 1 1 50%;
         max-width: 50%;
         min-width: 320px;
-        margin: 0px 0px 10px;
+        margin: 0px 0px 28px;
     }
 }
 
-.c-header{
+.catalog .content__inner {
+    background-color: transparent;
+}
+
+.c-header {
     list-style: none;
     background-color: #fff;
 
-    &__col{
+    &__col {
         flex: 1 1 auto;
         padding: 0px 15px;
     }
 
-    &__title{
+    &__title {
         font-weight: 700;
         font-size: rem(16px);
         line-height: rem(24px);
     }
 }
 
-.goods-item{
+.goods-item {
+    font-size: 14px;
 
-    &__image{
+    &__image {
         display: block;
         height: 290px;
         width: 100%;
@@ -780,11 +833,189 @@ h3 {
         object-fit: cover;
     }
 
-    &__footer{
-        padding: 0px 20px;
+    &__header {
+        position: relative;
     }
 
-    &__row{
+    &__footer {
+        padding: 0px 20px;
+        background-color: #fff;
+    }
+
+    &__row {
         justify-content: space-between;
+        padding: 15px 0px;
+
+        &:first-child {
+            border-bottom: 1px solid #ededed;
+        }
+    }
+
+    &__info {
+        font-weight: 700;
+    }
+
+    &__id {
+        font-weight: 700;
+    }
+
+    &__price {
+        font-weight: 900;
+        font-size: 18px;
+    }
+
+    &__status {
+        font-weight: 500;
+
+        &_on {
+            color: #4eda5e;
+        }
+
+        &_off {
+            color: #f63f45;
+        }
+    }
+}
+
+.goods-item:hover .goods-hidden {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: all .35s cubic-bezier(.25, .46, .45, .94), transform .45s cubic-bezier(.25, .46, .45, .94), -webkit-transform .45s cubic-bezier(.25, .46, .45, .94);
+}
+
+.goods-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(#000, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    transition: all .35s cubic-bezier(.25, .46, .45, .94), transform .45s cubic-bezier(.25, .46, .45, .94), -webkit-transform .45s cubic-bezier(.25, .46, .45, .94);
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+
+.goods-hidden__btn {
+    margin: 10px 10px;
+}
+
+
+// card
+
+.content__left {
+    padding-left: 30px;
+}
+
+.card .content__inner {
+    padding: 30px 30px 0px;
+}
+
+.card {
+    &__title {
+        color: #000;
+        font-size: 40px;
+        margin-top: 55px;
+        font-weight: 800;
+    }
+
+    &__info {
+        margin: 50px 0px 0px;
+        font-size: rem(18px);
+        line-height: rem(24px);
+    }
+
+    &__bottom {
+        justify-content: space-between;
+        margin-top: 33px;
+    }
+
+    &__link {
+        text-decoration: underline;
+        font-size: rem(18px);
+        font-weight: 700;
+        color: #4eda5e;
+    }
+
+    &__price {
+        font-weight: 700;
+        font-size: rem(24px);
+    }
+
+    &__btn {
+        margin: 20px auto 0px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.content__slider{
+    margin: 20px 0px 0px;
+}
+
+.card-slider {
+    width: 755px;
+    max-width: 100%;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__dots {
+        margin-left: 30px;
+    }
+}
+
+.c-table {
+    width: 100%;
+    border-collapse: collapse;
+
+    &__row {
+        border-bottom: 1px solid #ededed;
+    }
+
+    &__status {
+
+        &_off {
+            color: #f63f45;
+        }
+    }
+}
+
+.c-table td {
+    padding: 8px 0px 8px;
+}
+
+.c-table tr td:first-child {
+    font-size: rem(14px);
+}
+
+.c-table tr td:last-child {
+    text-align: right;
+    font-weight: 700;
+    font-size: rem(18px);
+}
+
+.c-dots {
+    flex-direction: column;
+
+    &__image {
+        width: 70px;
+        height: 70px;
     }
 }
