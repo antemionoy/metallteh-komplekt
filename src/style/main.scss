@@ -675,6 +675,8 @@ h3 {
         font-size: rem(50px);
         line-height: rem(42px);
         text-align: center;
+        font-family: 'Playfair Display SC';
+        font-weight: 700;
     }
 
 }
@@ -695,6 +697,10 @@ h3 {
         flex: 1 1 auto;
         padding: 0px 15px;
         margin: 0px 0px 15px;
+
+        &_large{
+            flex-basis: 100%;
+        }
     }
 
     &__input {
@@ -719,6 +725,7 @@ h3 {
         margin: 0px 0px 8px;
         display: inline-block;
         font-size: rem(13px);
+        text-transform: uppercase;
     }
 
     &__desc {
@@ -744,6 +751,7 @@ h3 {
         font-size: rem(18px);
         display: flex;
         justify-content: center;
+        border: none;
     }
 
 }
@@ -966,7 +974,7 @@ h3 {
     }
 }
 
-.content__slider{
+.content__slider {
     margin: 20px 0px 0px;
 }
 
@@ -1028,4 +1036,144 @@ h3 {
         border: none;
         background-color: transparent;
     }
+}
+
+/*checkbox*/
+
+.terms-conditions {
+    position: relative;
+    padding: 0 20px;
+}
+
+
+.checkbox-template,
+.radio-template {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    width: auto;
+    margin-bottom: 0;
+    height: auto
+}
+
+.checkbox-template::before,
+.radio-template::before {
+    margin-right: 10px;
+    content: '';
+    display: inline-block;
+    -webkit-transform: translate(-2px, -2px);
+    transform: translate(-2px, -2px);
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    background: #d72439;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+
+}
+
+.checkbox-template::after,
+.radio-template::after {
+    content: '✓';
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    display: block;
+    font-family: FontAwesome;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    font-size: .7em;
+    opacity: 0;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    color: #fff;
+}
+
+.form .terms-conditions label {
+    color: #aaa;
+    font-size: .9em;
+    vertical-align: -2px
+}
+
+.checkbox-template+label,
+.radio-template+label {
+    margin-left: 10px;
+    margin-top: 4px
+}
+
+.checkbox-template:checked::before,
+.radio-template:checked::before {
+    background: #d72439;
+    border-radius: 3px;
+}
+
+.checkbox-template:checked::after,
+.radio-template:checked::after {
+    opacity: 1
+}
+
+/*files*/
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    max-width: 80%;
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.no-js .inputfile+label {
+    display: none;
+}
+
+.inputfile:focus+label,
+.inputfile.has-focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile+label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile+label svg {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+    fill: rgba(#000, 0.4);
+    margin-top: -0.25em;
+}
+
+.inputfile-1+label {
+    color: #202124;
+    background-color: transparent;
+}
+
+.inputfile-1:focus+label,
+.inputfile-1.has-focus+label,
+.inputfile-1+label:hover {
+    background-color: transparent;
+    outline: #abcb29;
+    color: #d72439;
 }
