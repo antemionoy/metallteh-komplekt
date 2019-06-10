@@ -6,22 +6,61 @@
                 <div id="map" class="map"></div>
             </div>
             <div class="content__col content__padding catalog d-flex">
-                <ul class="catalog__header c-header d-flex">
-                    <li class="c-header__col">
-                        <h2 class="c-header__title">Тип помещения</h2>
-                    </li>
-                    <li class="c-header__col">
-                        <h2 class="c-header__title">Площадь</h2>
-                    </li>
-                    <li class="c-header__col">
-                        <h2 class="c-header__title">Цена</h2>
-                    </li>
-                    <li class="c-header__col">
-                        <h2 class="c-header__title">Вид</h2>
-                    </li>
-                </ul>
+                <form class="catalog__filter filter form">
+                    <ul class="catalog__header c-header d-flex">
+                        <li class="c-header__col d-flex">
+                            <label class="c-header__title">Тип помещения</label>
+                            <div class="filter__inner d-flex">
+                                <div class="form__group">
+                                    <select class="form__select filter__select">
+                                        <option value="Все помещения">Все помещения</option>
+                                        <option value="Все помещения">Все помещения</option>
+                                        <option value="Все помещения">Все помещения</option>
+                                        <option value="Все помещения">Все помещения</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="c-header__col d-flex">
+                            <label class="c-header__title">Площадь</label>
+                            <div class="filter__inner d-flex">
+                                <div class="form__group d-flex">
+                                    <label class="form__label filter__label">м2</label>
+                                    <input type="text" class="form__input filter__input">
+                                    <span class="filter__separator">-</span>
+                                    <input type="text" class="form__input filter__input">
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <input type="range" class="form__input filter__input form__range">
+                            </div>
+                        </li>
+                        <li class="c-header__col d-flex">
+                            <label class="c-header__title">Цена</label>
+                            <div class="filter__inner d-flex">
+                                <div class="form__group d-flex">
+                                    <label class="form__label filter__label">р</label>
+                                    <input type="text" class="form__input filter__input">
+                                    <span class="filter__separator">-</span>
+                                    <input type="text" class="form__input filter__input">
+                                </div>
+                            </div>
+                            <div class="form__group">
+                                <input type="range" class="form__input filter__input form__range">
+                            </div>
+                        </li>
+                        <li class="c-header__col d-flex">
+                            <label class="c-header__title">Вид</label>
+                            <div class="filter__inner filter__inner_column d-flex">
+                                <button type="button" class="filter__btn">Список</button>
+                                <button type="button" class="filter__btn">Плитка</button>
+                            </div>
+                        </li>
+                    </ul>
+                </form>
                 <div class="content__inner">
-                    <ul class="catalog__row row wrap d-flex">
+                    <h1 class="catalog__title title title_h1">Наши обьекты</h1>
+                    <ul class="catalog__row catalog__row_list row wrap d-flex">
                         <li class="catalog__col col">
                             <div class="catalog__item goods-item">
                                 <div class="goods-item__header">

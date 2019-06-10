@@ -185,7 +185,8 @@ button {
 }
 
 input,
-textarea {
+textarea,
+select {
     background: transparent;
     border: none;
     border-bottom: 1px solid #fff;
@@ -812,6 +813,14 @@ h3 {
         min-width: 320px;
         margin: 0px 0px 28px;
     }
+
+    &__title{
+        color: #000;
+        font-family: 'Playfair Display SC';
+        font-weight: 700;
+        margin: 0px 0px 20px;
+        font-size: 40px;
+    }
 }
 
 .catalog .content__inner {
@@ -821,17 +830,111 @@ h3 {
 .c-header {
     list-style: none;
     background-color: #fff;
+    padding-top: 15px;
+    padding-bottom: 15px;
 
     &__col {
-        flex: 1 1 auto;
+        flex: 1 1 25%;
         padding: 0px 15px;
+        flex-direction: column;
     }
 
     &__title {
         font-weight: 700;
         font-size: rem(16px);
         line-height: rem(24px);
+        padding-bottom: 15px;
     }
+}
+
+.filter .form__group{
+    padding: 0px;
+    align-items: center;
+    display: flex;
+}
+
+/* filter */
+
+.filter{
+    &__inner{
+        margin-top: 30px;
+        align-items: center;
+
+        &_column{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__input{
+        border-radius: 0px;
+        height: 31px; 
+        border: 1px solid #efefef;
+        text-align: center;
+        padding: 5px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    &__select{
+        border-radius: 0px;
+        height: 31px; 
+        border: 1px solid #efefef;
+        text-align: center;
+        padding: 5px;
+        background-color: #f6f6f6;
+        color: #000;
+        font-weight: 500;
+    }
+
+    &__label{
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    &__separator{
+        font-size: 20px;
+        line-height: 1;
+        margin: 0px 10px;
+    }
+
+    &__label{
+        margin-right: 5px;
+        font-style: $font-roboto;
+        font-size: 12px;
+        font-weight: 500;
+        color: #000;
+    }
+
+    &__btn{
+        background: transparent;
+        border: none;
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #202124;
+        font-weight: 500;
+    }
+}
+
+.catalog__row_list .catalog__col {
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.catalog__row_list .goods-item{
+    display: flex;
+}
+
+.catalog__row_list .goods-item__image{
+    width: 100px;
+    height: 83px;
+}
+
+.catalog__row_list .goods-item__footer{
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
 }
 
 .goods-item {
