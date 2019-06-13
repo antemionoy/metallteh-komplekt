@@ -17,6 +17,42 @@
         </div>
     </div>
 </footer>
+<div class="remodal" data-remodal-id="modal-callback">
+    <div class="remodal__box-title">
+        <div class="remodal__title title title_h3">Заказать звонок</div>
+    </div>
+    <div class="contact-form">
+        <div class="form-complete">
+            <div class="form-complete__title title title_h3">Ваше сообщение отправлено</div>
+            <div class="form-complete__subtitle">
+                Ма свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="form-complete__button button">Cпасибо жду звонка.</a>
+        </div>
+        <form action="#"class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid wrap d-flex">
+                <div class="form__group">
+                    <label for="#" class="form__label">Ваше Фио</label>
+                    <input type="text" class="form__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__group">
+                    <label for="#" class="form__label">Телефон</label>
+                    <input type="tel" class="form__input" placeholder="Ваш телефон" required="">
+                </div>
+                <div class="form-group form__group_large terms-conditions">
+                    <label for="license1">
+                        <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                        <span> Я согласен с политикой конфиденциальности </span>
+                    </label>
+                </div>
+            </div>
+            <button class="remodal__btn form__btn btn btn_round-right-big d-flex">
+                <span class="btn__text">Заказать звонок</span>
+            </button>
+        </form>
+    </div>
+     <button data-remodal-action="close" class="remodal-close"></button>
+</div>
 </div>
 <div class="arrow-up"></div>
 <script src="js/main.js"></script>

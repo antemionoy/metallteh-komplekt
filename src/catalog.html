@@ -13,10 +13,10 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group">
                                     <select class="form__select filter__select">
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
+                                        <option value="Все помещения 1">Все помещения 1</option>
+                                        <option value="Все помещения 2">Все помещения 2</option>
+                                        <option value="Все помещения 3">Все помещения 3</option>
+                                        <option value="Все помещения 4">Все помещения 4</option>
                                     </select>
                                 </div>
                             </div>
@@ -26,13 +26,13 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group d-flex">
                                     <label class="form__label filter__label">м2</label>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_square-0-js">
                                     <span class="filter__separator">-</span>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_square-1-js">
                                 </div>
                             </div>
                             <div class="form__group">
-                                <input type="range" class="form__input filter__input form__range">
+                                <div class="form__range filter__range_square-js"></div>
                             </div>
                         </li>
                         <li class="c-header__col d-flex">
@@ -40,13 +40,13 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group d-flex">
                                     <label class="form__label filter__label">р</label>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_price-0-js">
                                     <span class="filter__separator">-</span>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_price-1-js">
                                 </div>
                             </div>
                             <div class="form__group">
-                                <input type="range" class="form__input filter__input form__range">
+                                <div class="form__range filter__range_price-js"></div>
                             </div>
                         </li>
                         <li class="c-header__col d-flex">
@@ -67,7 +67,7 @@
                         <li class="catalog-menu__item">Цена</li>
                         <li class="catalog-menu__item">Статус</li>
                     </ul>
-                    <ul class="catalog__row row wrap d-flex">
+                    <ul class="catalog__row catalog__row_list row wrap d-flex">
                         <li class="catalog__col col">
                             <div class="catalog__item goods-item">
                                 <div class="goods-item__header">
@@ -75,17 +75,17 @@
                                 </div>
                                 <div class="goods-item__footer">
                                     <div class="goods-item__row d-flex">
-                                        <div class="goods-item__left d-flex">
-                                            <span class="goods-item__pos goods-item__info-item goods-item__object">Офис</span>
+                                        <div class="goods-item__left goods-item__col d-flex">
+                                            <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
                                             <div class="goods-item__id goods-item__pos">id 205</div>
                                         </div>
-                                        <div class="goods-item__info">
+                                        <div class="goods-item__info goods-item__col">
                                             <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
                                             <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
                                             <div class="goods-item__price goods-item__pos">100500 руб</div>
                                         </div>
                                     </div>
-                                    <div class="goods-item__hidden goods-hidden d-flex">
+                                    <div class="goods-item__hidden goods-item__col goods-hidden d-flex">
                                         <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
                                         <div class="goods-hidden__inner">
                                             <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>

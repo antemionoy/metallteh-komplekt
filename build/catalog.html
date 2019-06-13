@@ -45,7 +45,7 @@
                     <a href="mailto:test@gmail.com" class="header__link header__mail">test@gmail.com</a>
                     <a href="tel:89999999999" class="header__link header__number">+7 (999) 999 99 99</a>
                 </div>
-                <a href="#" class="header__callback">Заказать звонок</a>
+                <a href="#" class="header__callback" data-remodal-target="modal-callback">Заказать звонок</a>
             </div>
         </header>
 <main class="main main-inner">
@@ -62,10 +62,10 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group">
                                     <select class="form__select filter__select">
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
-                                        <option value="Все помещения">Все помещения</option>
+                                        <option value="Все помещения 1">Все помещения 1</option>
+                                        <option value="Все помещения 2">Все помещения 2</option>
+                                        <option value="Все помещения 3">Все помещения 3</option>
+                                        <option value="Все помещения 4">Все помещения 4</option>
                                     </select>
                                 </div>
                             </div>
@@ -75,13 +75,13 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group d-flex">
                                     <label class="form__label filter__label">м2</label>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_square-0-js">
                                     <span class="filter__separator">-</span>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_square-1-js">
                                 </div>
                             </div>
                             <div class="form__group">
-                                <input type="range" class="form__input filter__input form__range">
+                                <div class="form__range filter__range_square-js"></div>
                             </div>
                         </li>
                         <li class="c-header__col d-flex">
@@ -89,13 +89,13 @@
                             <div class="filter__inner d-flex">
                                 <div class="form__group d-flex">
                                     <label class="form__label filter__label">р</label>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_price-0-js">
                                     <span class="filter__separator">-</span>
-                                    <input type="text" value="1000" class="form__input filter__input">
+                                    <input type="text" value="1000" class="form__input filter__input filter__value_price-1-js">
                                 </div>
                             </div>
                             <div class="form__group">
-                                <input type="range" class="form__input filter__input form__range">
+                                <div class="form__range filter__range_price-js"></div>
                             </div>
                         </li>
                         <li class="c-header__col d-flex">
@@ -116,7 +116,7 @@
                         <li class="catalog-menu__item">Цена</li>
                         <li class="catalog-menu__item">Статус</li>
                     </ul>
-                    <ul class="catalog__row row wrap d-flex">
+                    <ul class="catalog__row catalog__row_list row wrap d-flex">
                         <li class="catalog__col col">
                             <div class="catalog__item goods-item">
                                 <div class="goods-item__header">
@@ -124,17 +124,17 @@
                                 </div>
                                 <div class="goods-item__footer">
                                     <div class="goods-item__row d-flex">
-                                        <div class="goods-item__left d-flex">
-                                            <span class="goods-item__pos goods-item__info-item goods-item__object">Офис</span>
+                                        <div class="goods-item__left goods-item__col d-flex">
+                                            <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
                                             <div class="goods-item__id goods-item__pos">id 205</div>
                                         </div>
-                                        <div class="goods-item__info">
+                                        <div class="goods-item__info goods-item__col">
                                             <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
                                             <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
                                             <div class="goods-item__price goods-item__pos">100500 руб</div>
                                         </div>
                                     </div>
-                                    <div class="goods-item__hidden goods-hidden d-flex">
+                                    <div class="goods-item__hidden goods-item__col goods-hidden d-flex">
                                         <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
                                         <div class="goods-hidden__inner">
                                             <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
@@ -277,6 +277,42 @@
         </div>
     </div>
 </footer>
+<div class="remodal" data-remodal-id="modal-callback">
+    <div class="remodal__box-title">
+        <div class="remodal__title title title_h3">Заказать звонок</div>
+    </div>
+    <div class="contact-form">
+        <div class="form-complete">
+            <div class="form-complete__title title title_h3">Ваше сообщение отправлено</div>
+            <div class="form-complete__subtitle">
+                Ма свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="form-complete__button button">Cпасибо жду звонка.</a>
+        </div>
+        <form action="#"class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid wrap d-flex">
+                <div class="form__group">
+                    <label for="#" class="form__label">Ваше Фио</label>
+                    <input type="text" class="form__input" placeholder="Ваше имя">
+                </div>
+                <div class="form__group">
+                    <label for="#" class="form__label">Телефон</label>
+                    <input type="tel" class="form__input" placeholder="Ваш телефон" required="">
+                </div>
+                <div class="form-group form__group_large terms-conditions">
+                    <label for="license1">
+                        <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                        <span> Я согласен с политикой конфиденциальности </span>
+                    </label>
+                </div>
+            </div>
+            <button class="remodal__btn form__btn btn btn_round-right-big d-flex">
+                <span class="btn__text">Заказать звонок</span>
+            </button>
+        </form>
+    </div>
+     <button data-remodal-action="close" class="remodal-close"></button>
+</div>
 </div>
 <div class="arrow-up"></div>
 <script src="js/main.js"></script>
