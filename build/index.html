@@ -42,8 +42,8 @@
                             </li>
                         </ul>
                     </nav>
-                    <a href="mailto:test@gmail.com" class="header__link header__mail">test@gmail.com</a>
-                    <a href="tel:89999999999" class="header__link header__number">+7 (999) 999 99 99</a>
+                    <a href="mailto:test@gmail.com" class="header__link header__mail mail">test@gmail.com</a>
+                    <a href="tel:89999999999" class="header__link header__number number">+7 (999) 999 99 99</a>
                 </div>
                 <a href="#" class="header__callback" data-remodal-target="modal-callback">Заказать звонок</a>
             </div>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="promo__partners partners">
                         <h3 class="partners__title">Наши партнеры</h3>
-                        <ul class="partners__list d-flex">
+                        <ul class="partners__list wrap d-flex">
                             <li class="partners__item">
                                 <img src="img/partners__image_one.png" alt="partners image" class="partners__image">
                             </li>
@@ -72,12 +72,43 @@
                             <li class="partners__item">
                                 <img src="img/partners__image_three.png" alt="partners image" class="partners__image">
                             </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_four.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_five.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_six.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_seven.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_eight.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_nine.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_ten.png" alt="partners image" class="partners__image">
+                            </li>
+                            <li class="partners__item">
+                                <img src="img/partners__image_eleven.png" alt="partners image" class="partners__image">
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="promo__carousel carousel">
                     <img class="carousel__image" src="img/promo-image.jpg" alt="main-image">
                     <img class="carousel__image" src="img/promo-image_2.jpg" alt="main-image">
+                </div>
+                <div class="carousel-nav d-flex">
+                    <div class="carousel-nav__num">01</div>
+                    <div class="carousel-nav__line">
+                        <div class="carousel-nav__item"></div>
+                    </div>
+                    <div class="carousel-nav__num">02</div>
                 </div>
             </div>
             <aside class="aside d-flex">
@@ -105,6 +136,42 @@
         </div>
     </div>
 </footer>
+<div class="remodal" data-remodal-id="modal-callback">
+    <div class="remodal__box-title">
+        <div class="remodal__title title title_h3">Заказать звонок</div>
+    </div>
+    <div class="contact-form">
+        <div class="form-complete">
+            <div class="form-complete__title title title_h3">Ваше сообщение отправлено</div>
+            <div class="form-complete__subtitle">
+                Ма свяжемся с Вами в ближайшее время
+            </div>
+            <a href="#" class="form-complete__button button">Cпасибо жду звонка.</a>
+        </div>
+        <form action="#" class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid row d-flex">
+                <div class="form__group">
+                    <label for="#" class="form__label">Ваше Фио</label>
+                    <input type="text" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label for="#" class="form__label">Телефон</label>
+                    <input type="tel" class="form__input" required>
+                </div>
+            </div>
+            <div class="form-group form__group_large terms-conditions">
+                <label for="license1">
+                    <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                    <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                </label>
+            </div>
+            <button class="remodal__btn form__btn btn d-flex">
+                <span class="btn__text">Заказать звонок</span>
+            </button>
+        </form>
+    </div>
+    <button data-remodal-action="close" class="remodal-close"></button>
+</div>
 </div>
 <div class="arrow-up"></div>
 <script src="js/main.js"></script>

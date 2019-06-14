@@ -67,42 +67,45 @@ function rangeSlider(elementRange, inputOne, inputTwo) {
     var input1 = document.querySelector(inputTwo);
     var inputs = [input0, input1];
 
-    noUiSlider.create(stepsSlider, {
-        start: [40, 160],
-        connect: true,
-        range: {
-            'min': [0],
-            'max': 200
-        }
-    });
+    if (stepsSlider) {
 
-    stepsSlider.noUiSlider.on('update', function(values, handle) {
-        inputs[handle].value = values[handle];
-    });
-
-
-    inputs.forEach(function(input, handle) {
-
-        input.addEventListener('change', function() {
-            stepsSlider.noUiSlider.setHandle(handle, this.value);
+        noUiSlider.create(stepsSlider, {
+            start: [40, 160],
+            connect: true,
+            range: {
+                'min': [0],
+                'max': 200
+            }
         });
 
-        input.addEventListener('keydown', function(e) {
-
-            var values = stepsSlider.noUiSlider.get();
-            var value = Number(values[handle]);
-
-            // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
-            var steps = stepsSlider.noUiSlider.steps();
-
-            // [down, up]
-            var step = steps[handle];
-
-            var position;
-
-
+        stepsSlider.noUiSlider.on('update', function(values, handle) {
+            inputs[handle].value = values[handle];
         });
-    });
+
+
+        inputs.forEach(function(input, handle) {
+
+            input.addEventListener('change', function() {
+                stepsSlider.noUiSlider.setHandle(handle, this.value);
+            });
+
+            input.addEventListener('keydown', function(e) {
+
+                var values = stepsSlider.noUiSlider.get();
+                var value = Number(values[handle]);
+
+                // [[handle0_down, handle0_up], [handle1_down, handle1_up]]
+                var steps = stepsSlider.noUiSlider.steps();
+
+                // [down, up]
+                var step = steps[handle];
+
+                var position;
+
+
+            });
+        });
+    }
 }
 
 
@@ -214,7 +217,7 @@ $(function() {
     $('.card-slider').owlCarousel({
         items: 1,
         loop: true,
-        nav: false,
+        nav: true,
         dotsContainer: ".card-slider__dots",
         autoplay: true,
         dots: true,

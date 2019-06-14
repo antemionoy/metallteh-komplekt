@@ -52,8 +52,8 @@
                         <li class="c-header__col d-flex">
                             <label class="c-header__title">Вид</label>
                             <div class="filter__inner filter__inner_column d-flex">
-                                <button type="button" class="filter__btn">Список</button>
-                                <button type="button" class="filter__btn">Плитка</button>
+                                <button type="button" class="filter__btn filter__btn_icon-list">Список</button>
+                                <button type="button" class="filter__btn filter__btn_icon-block">Плитка</button>
                             </div>
                         </li>
                     </ul>
@@ -61,36 +61,38 @@
                 <div class="content__inner">
                     <h1 class="catalog__title title title_h1">Наши обьекты</h1>
                     <ul class="catalog__menu catalog-menu">
-                        <li class="catalog-menu__item">Обьект</li>
-                        <li class="catalog-menu__item">Локация</li>
-                        <li class="catalog-menu__item">Площадь</li>
-                        <li class="catalog-menu__item">Цена</li>
-                        <li class="catalog-menu__item">Статус</li>
+                        <li class="catalog-menu__item width-object">Обьект</li>
+                        <li class="catalog-menu__item width-location">Локация</li>
+                        <li class="catalog-menu__item width-square">Площадь</li>
+                        <li class="catalog-menu__item width-price">Цена</li>
+                        <li class="catalog-menu__item width-status">Статус</li>
                     </ul>
                     <ul class="catalog__row catalog__row_list row wrap d-flex">
                         <li class="catalog__col col">
                             <div class="catalog__item goods-item">
-                                <div class="goods-item__header">
-                                    <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
-                                </div>
-                                <div class="goods-item__footer">
-                                    <div class="goods-item__row d-flex">
-                                        <div class="goods-item__left goods-item__col d-flex">
-                                            <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
-                                            <div class="goods-item__id goods-item__pos">id 205</div>
-                                        </div>
-                                        <div class="goods-item__info goods-item__col">
-                                            <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
-                                            <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
-                                            <div class="goods-item__price goods-item__pos">100500 руб</div>
-                                        </div>
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
                                     </div>
-                                    <div class="goods-item__hidden goods-item__col goods-hidden d-flex">
-                                        <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
-                                        <div class="goods-hidden__inner">
-                                            <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
-                                            <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
-                                        </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
                                     </div>
                                 </div>
                             </div>

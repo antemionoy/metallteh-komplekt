@@ -29,29 +29,29 @@
             </div>
             <a href="#" class="form-complete__button button">Cпасибо жду звонка.</a>
         </div>
-        <form action="#"class="remodal__form form form-ajax">
-            <div class="form__inner remodal__grid wrap d-flex">
+        <form action="#" class="remodal__form form form-ajax">
+            <div class="form__inner remodal__grid row d-flex">
                 <div class="form__group">
                     <label for="#" class="form__label">Ваше Фио</label>
-                    <input type="text" class="form__input" placeholder="Ваше имя">
+                    <input type="text" class="form__input" required>
                 </div>
                 <div class="form__group">
                     <label for="#" class="form__label">Телефон</label>
-                    <input type="tel" class="form__input" placeholder="Ваш телефон" required="">
-                </div>
-                <div class="form-group form__group_large terms-conditions">
-                    <label for="license1">
-                        <input id="license1" type="checkbox" class="checkbox-template" checked="">
-                        <span> Я согласен с политикой конфиденциальности </span>
-                    </label>
+                    <input type="tel" class="form__input" required>
                 </div>
             </div>
-            <button class="remodal__btn form__btn btn btn_round-right-big d-flex">
+            <div class="form-group form__group_large terms-conditions">
+                <label for="license1">
+                    <input id="license1" type="checkbox" class="checkbox-template" checked="">
+                    <span> Я прочитал(а) и принимаю условия <a href="#" class="terms-conditions__link">пользовательского соглашения</a></span>
+                </label>
+            </div>
+            <button class="remodal__btn form__btn btn d-flex">
                 <span class="btn__text">Заказать звонок</span>
             </button>
         </form>
     </div>
-     <button data-remodal-action="close" class="remodal-close"></button>
+    <button data-remodal-action="close" class="remodal-close"></button>
 </div>
 </div>
 <div class="arrow-up"></div>
