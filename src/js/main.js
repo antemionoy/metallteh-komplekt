@@ -58,6 +58,24 @@ function selectFun() {
 }
 
 
+function changeCatalogBlocks() {
+
+    $('.filter__btn-list-js').on('click', function() {
+
+        $('.catalog__row').addClass('catalog__row_list');
+
+    });
+
+
+    $('.filter__btn-block-js').on('click', function() {
+
+        $('.catalog__row').removeClass('catalog__row_list');
+
+    });
+
+}
+
+
 
 function rangeSlider(elementRange, inputOne, inputTwo) {
 
@@ -172,6 +190,8 @@ function files() {
 
 
 $(function() {
+
+    changeCatalogBlocks();
 
     selectFun();
 
