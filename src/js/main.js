@@ -60,16 +60,34 @@ function selectFun() {
 
 function changeCatalogBlocks() {
 
-    $('.filter__btn-list-js').on('click', function() {
+    $('.filter__btn-list-js').on('click', function(e) {
+        e.preventDefault();
 
         $('.catalog__row').addClass('catalog__row_list');
+        $('.catalog-menu').addClass('list');
 
     });
 
 
-    $('.filter__btn-block-js').on('click', function() {
+    $('.filter__btn-block-js').on('click', function(e) {
+        e.preventDefault();
 
         $('.catalog__row').removeClass('catalog__row_list');
+        $('.catalog-menu').removeClass('list');
+
+    });
+
+}
+
+
+function showFilter() {
+
+    $('.tabs__link_filter-show-js').on('click', function(e){
+        e.preventDefault();
+
+         $('.catalog__filter').toggleClass('show');
+
+         $(this).toggleClass('active');
 
     });
 
@@ -190,6 +208,8 @@ function files() {
 
 
 $(function() {
+
+    showFilter();
 
     changeCatalogBlocks();
 
