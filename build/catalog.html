@@ -46,6 +46,11 @@
                         <a href="mailto:test@gmail.com" class="header__link header__mail mail">test@gmail.com</a>
                         <a href="tel:89999999999" class="header__link header__number number">+7 (999) 999 99 99</a>
                     </div>
+                    <div class="header__hamburger hamburger">
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                        <span class="hamburger__line"></span>
+                    </div>
                 </div>
                 <a href="#" class="header__callback" data-remodal-target="modal-callback">Заказать звонок</a>
             </div>
@@ -128,36 +133,7 @@
                         <li class="catalog-menu__item width-price">Цена</li>
                         <li class="catalog-menu__item width-status">Статус</li>
                     </ul>
-                    <ul class="catalog__row row wrap d-flex">
-                        <!--                         <li class="catalog__col col">
-                            <div class="catalog__item goods-item">
-                                <div class="goods-item__col width-object d-flex">
-                                    <div class="goods-item__header">
-                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
-                                    </div>
-                                    <div class="goods-item__left">
-                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
-                                        <div class="goods-item__id goods-item__pos">id 205</div>
-                                    </div>
-                                </div>
-                                <div class="goods-item__col width-location">
-                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
-                                </div>
-                                <div class="goods-item__col width-square">
-                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
-                                </div>
-                                <div class="goods-item__col width-price">
-                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
-                                </div>
-                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
-                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
-                                    <div class="goods-hidden__inner">
-                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
-                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li> -->
+                    <ul class="catalog__row catalog__row-blocks show row wrap d-flex">
                         <li class="catalog__col col">
                             <div class="catalog__item goods-item">
                                 <div class="goods-item__header">
@@ -262,6 +238,153 @@
                                             <div class="goods-item__id">id 205</div>
                                             <div class="goods-item__price">100500 руб</div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="catalog__row catalog__row_list catalog__row-lines row wrap d-flex">
+                        <li class="catalog__col col">
+                            <div class="catalog__item goods-item">
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
+                                    </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog__col col">
+                            <div class="catalog__item goods-item">
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
+                                    </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog__col col">
+                            <div class="catalog__item goods-item">
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
+                                    </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog__col col">
+                            <div class="catalog__item goods-item">
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
+                                    </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="catalog__col col">
+                            <div class="catalog__item goods-item">
+                                <div class="goods-item__col width-object d-flex">
+                                    <div class="goods-item__header">
+                                        <img src="img/goods__image.jpg" alt="Картинка товара" class="goods-item__image">
+                                    </div>
+                                    <div class="goods-item__left">
+                                        <span class="goods-item__pos goods-item__info-item goods-item__object">Офисное помещение</span>
+                                        <div class="goods-item__id goods-item__pos">id 205</div>
+                                    </div>
+                                </div>
+                                <div class="goods-item__col width-location">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__location">Петроградский</span>
+                                </div>
+                                <div class="goods-item__col width-square">
+                                    <span class="goods-item__pos goods-item__info-item goods-item__square">500м2</span>
+                                </div>
+                                <div class="goods-item__col width-price">
+                                    <div class="goods-item__price goods-item__pos">100500 руб</div>
+                                </div>
+                                <div class="goods-item__hidden goods-hidden goods-item__col width-status d-flex">
+                                    <div class="goods-item__status goods-item__status_on">Сдается сейчас</div>
+                                    <div class="goods-hidden__inner">
+                                        <button type="button" class="goods-hidden__btn btn btn_red">Оставить заявку</button>
+                                        <button type="button" class="goods-hidden__btn btn btn_empty">Подробнее</button>
                                     </div>
                                 </div>
                             </div>

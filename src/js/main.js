@@ -63,7 +63,10 @@ function changeCatalogBlocks() {
     $('.filter__btn-list-js').on('click', function(e) {
         e.preventDefault();
 
-        $('.catalog__row').addClass('catalog__row_list');
+        // $('.catalog__row').addClass('catalog__row_list');
+
+        $('.catalog__row-lines').addClass('show');
+        $('.catalog__row-blocks').removeClass('show');
         $('.catalog-menu').addClass('list');
 
     });
@@ -72,7 +75,10 @@ function changeCatalogBlocks() {
     $('.filter__btn-block-js').on('click', function(e) {
         e.preventDefault();
 
-        $('.catalog__row').removeClass('catalog__row_list');
+        // $('.catalog__row').removeClass('catalog__row_list');
+
+        $('.catalog__row-blocks').addClass('show');
+        $('.catalog__row-lines').removeClass('show');
         $('.catalog-menu').removeClass('list');
 
     });
