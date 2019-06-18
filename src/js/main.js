@@ -211,9 +211,30 @@ function files() {
 }
 
 
+function sidebarToggle() {
+    if ($(window).width() <= 1023) {
+
+        $('.hamburger').on('click', function(e) {
+            e.preventDefault();
+
+            $(this).toggleClass("is-active");
+            $('.header__navigation').toggleClass('is-visible');
+            $('.wrapper').toggleClass('open-sidebar');
+            $('html').toggleClass('overflow');
+
+        });
+
+    }
+
+}
+
+
+
 
 
 $(function() {
+
+    sidebarToggle();
 
     showFilter();
 
